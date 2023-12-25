@@ -1,1 +1,110 @@
-Hello World
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraj Gajula</title>
+    <style>
+        body {
+            background-color: #a39f9f;
+            color: #ffffff;
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            font-size: large;
+        }
+
+        header {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 15px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        footer {
+            background-color: #333333;
+            color: #ffffff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            cursor: pointer;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin: 60px 0 20px;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+
+        li {
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ddd;
+        }
+        p {
+            background-color: #333333;
+            padding: 10px;
+            border-radius: 5px; 
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#About">About</a>
+            <a href="#Resume">Resume</a>
+            <a href="#Projects">Projects</a>
+        </nav>
+    </header>
+    <footer>
+        &copy; 2023 Your Website | Contact: info@yourwebsite.com
+    </footer>
+    <h1>Suraj Gajula</h1>
+
+    <ul>
+        <li id="About">About</li>
+        <p>Aspiring Software Developer.<br>
+        Programming Languages: C++, C#, Swift</p>
+        <li id="Resume">Resume</li>
+        <p>Intern, HTOH Solutions August 2023 - Present<br> 
+        ● Added advanced functionality such as LRU caching, fixed bugs, and improved user<br>
+        experience for their main product, the UseBetter app, using Swift in Xcode.</p>
+        <li id="Projects">Projects</li>
+        <p>Unity Game Development September 2023 - Present<br>
+            ● Used C# programming in Unity in order to code a<br>
+            functional RPG. Also created digital assets including sprites, music, and dialogue for the game.</p>
+    </ul>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
