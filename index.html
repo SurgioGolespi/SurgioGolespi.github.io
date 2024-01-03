@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,6 +71,38 @@
             border-radius: 5px; 
             margin-bottom: 20px;
         }
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .card {
+            background: linear-gradient(to right, #adadad, #050505);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+        img {
+            width: 30px; /* Adjust the width of the logo as needed */
+            height: auto;
+            margin-right: 10px; /* Adjust the margin between the logo and text */
+        }
+        h6 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
     </style>
 </head>
 <body>
@@ -89,23 +123,48 @@
         <li id="About">About</li>
         <p>Software Developer.<br>
         Freshman at Santa Monica College majoring in Computer Science</p>
-        <li id="Skills">Skills</li>
-        <p>Programming Languages: C#, HTML, Swift<br>
-        Tools: Github, Visual Studio Code, Xcode</p>
+        <li id="Skills">
+            <img src="/Users/surgi/Website/SurgioGolespi.github.io/C# Logo.png" alt="C# Logo">
+            <h6>Programming Languages: C#</h6>
+        </li>
+        <li>
+            <img src="/Users/surgi/Website/SurgioGolespi.github.io/C# Logo.png" alt="HTML Logo">
+            <h6>Programming Languages: HTML</h6>
+        </li>
+        <li>
+            <img src="/Users/surgi/Website/SurgioGolespi.github.io/C# Logo.png" alt="Swift Logo">
+            <h6>Programming Languages: Swift</h6>
+        </li>
+        <li>
+            <img src="/Users/surgi/Website/SurgioGolespi.github.io/C# Logo.png" alt="GitHub Logo">
+            <h6>Tools: Github</h6>
+        </li>
+        <li>
+            <img src="/Users/surgi/Website/SurgioGolespi.github.io/C# Logo.png" alt="VS Code Logo">
+            <h6>Tools: Visual Studio Code</h6>
+        </li>
+        <li>
+            <img src="/Users/surgi/Website/SurgioGolespi.github.io/C# Logo.png" alt="Xcode Logo">
+            <h6>Tools: Xcode</h6>
+        </li>
         <li id="Experience">Experience</li>
         <p>Intern, HTOH Solutions August 2023 - Present<br> 
         Added advanced functionality such as LRU caching, fixed bugs, and improved user<br>
         experience for their main product, the UseBetter app, using Swift in Xcode.</p>
         <li id="Projects">Projects</li>
-        <p>Unity Game Development 						    September 2023 - Present<br>      
-            Used C# programming in Unity to code a <br>
-            functional RPG. Also made creative assets including <br>
-            sprites, music, and dialogue for the game.<br>
-            <br>
-            Personal Website						    	     December 2023 - Present  <br>
-            Used HTML programming in GitHub Pages to code a<br>
-            professional website. Added user interactivity and utilized <br>
-            source control techniques.</p>
+        <div class="card-container">
+            <div class="card">
+                <p>Unity Game Development<br>
+                    September 2023 - Present<br>      
+                    Used C# programming in Unity to code a functional RPG. Also made creative assets including sprites, music, and dialogue for the game.<br>
+                    <br></p>
+            </div>
+            <div class="card">
+                <p>Personal Website<br>
+                    December 2023 - Present<br>
+                    Used HTML programming in GitHub Pages to code a professional website. Added user interactivity and utilized source control techniques.</p>
+            </div>
+        </div>   
     </ul>
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -119,3 +178,4 @@
         });
     </script>
 </body>
+</html>
