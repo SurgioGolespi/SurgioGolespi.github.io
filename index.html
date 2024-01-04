@@ -33,6 +33,7 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            z-index: 2;
         }
 
         nav {
@@ -63,6 +64,7 @@
         li {
             font-size: 24px;
             margin-bottom: 20px;
+            align-items: center;
             padding: 20px;
             border: 1px solid #ddd;
         }
@@ -80,28 +82,28 @@
         }
 
         .card {
-            background: linear-gradient(to right, #adadad, #050505);
+            background: linear-gradient(to left, #adadad, #050505);
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 15px;
-            padding: 20px;
-            width: 300px;
+            margin: 10px;
+            padding: 10px;
+            width: 400px;
             text-align: center;
             transition: transform 0.3s ease;
         }
 
         .card:hover {
             transform: scale(1.05);
+            z-index: 1;
         }
         img {
-            width: 30px; /* Adjust the width of the logo as needed */
+            width: 100px; 
             height: auto;
-            margin-right: 10px; /* Adjust the margin between the logo and text */
+            margin-right: 200px;
+            margin-left: 200px;
         }
-        h6 {
+        #Types {
             display: flex;
-            align-items: center;
-            justify-content: center;
         }
     </style>
 </head>
@@ -115,7 +117,7 @@
         </nav>
     </header>
     <footer>
-        &copy; 2023 Suraj Gajula | Contact: ssamgajula@gmail.com
+        ssamgajula@gmail.com | github.com/SurgioGolespi
     </footer>
     <h1>Suraj Gajula</h1>
 
@@ -123,34 +125,20 @@
         <li id="About">About</li>
         <p>Software Developer.<br>
         Freshman at Santa Monica College majoring in Computer Science</p>
-        <li id="Skills">
-            <img src="/Users/surgi/Website/SurgioGolespi.github.io/C# Logo.png" alt="C# Logo">
-            <h6>Programming Languages: C#</h6>
-        </li>
-        <li>
-            <img src="/Users/surgi/Website/SurgioGolespi.github.io/C# Logo.png" alt="HTML Logo">
-            <h6>Programming Languages: HTML</h6>
-        </li>
-        <li>
-            <img src="/Users/surgi/Website/SurgioGolespi.github.io/C# Logo.png" alt="Swift Logo">
-            <h6>Programming Languages: Swift</h6>
-        </li>
-        <li>
-            <img src="/Users/surgi/Website/SurgioGolespi.github.io/C# Logo.png" alt="GitHub Logo">
-            <h6>Tools: Github</h6>
-        </li>
-        <li>
-            <img src="/Users/surgi/Website/SurgioGolespi.github.io/C# Logo.png" alt="VS Code Logo">
-            <h6>Tools: Visual Studio Code</h6>
-        </li>
-        <li>
-            <img src="/Users/surgi/Website/SurgioGolespi.github.io/C# Logo.png" alt="Xcode Logo">
-            <h6>Tools: Xcode</h6>
+        <li id="Skills">Skills</li>
+            <li id = "Types">Languages
+            <img src="C%23 Logo.png" alt="C# Logo">
+            <img src="HTML Logo.png" alt="HTML Logo">
+            <img src="Swift Logo.png" alt="Swift Logo"></li>
+            <li id = "Types">Tools
+            <img src="VS Code Logo.png" alt="VS Code Logo">
+            <img src="Xcode Logo.png" alt="Xcode Logo">
+            <img src="Unity Logo.png" alt="Unity Logo"></li>
         </li>
         <li id="Experience">Experience</li>
-        <p>Intern, HTOH Solutions August 2023 - Present<br> 
-        Added advanced functionality such as LRU caching, fixed bugs, and improved user<br>
-        experience for their main product, the UseBetter app, using Swift in Xcode.</p>
+            <p>Intern, HTOH Solutions August 2023 - Present<br> 
+            Added advanced functionality such as LRU caching, fixed bugs, and improved user<br>
+            experience for their main product, the UseBetter app, using Swift in Xcode.</p>
         <li id="Projects">Projects</li>
         <div class="card-container">
             <div class="card">
