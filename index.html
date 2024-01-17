@@ -6,7 +6,7 @@
     <title>Suraj Gajula</title>
     <style>
         body {
-            background: linear-gradient(to right, #adadad, #050505);
+            background: linear-gradient(to top, #adadad, #050505);
             color: #ffffff;
             font-family: 'Arial', 'Helvetica', sans-serif;
             padding: 0;
@@ -17,7 +17,7 @@
         }
 
         header {
-            background-color: #333333;
+            background-color: #050505;
             color: #ffffff;
             padding: 15px;
             text-align: center;
@@ -27,7 +27,7 @@
             z-index: 1000;
         }
         footer {
-            background-color: #333333;
+            background-color: #050505;
             color: #ffffff;
             padding: 40px 15px;
             position: fixed;
@@ -89,11 +89,25 @@
             width: 400px;
             text-align: center;
             transition: transform 0.3s ease;
+            position: relative; 
         }
 
         .card:hover {
             transform: scale(1.05);
             z-index: 1;
+        }
+        .card p {
+            display: none;
+            position: absolute; 
+        }
+        .card h1 {
+            display: block; 
+        }
+        .card:hover p {
+            display: block; 
+        }
+        .card:hover h1 {
+            display: none; 
         }
         img {
             width: 100px; 
@@ -106,7 +120,7 @@
         }
         #Job {
             text-align: center;
-            background: linear-gradient(to left, #adadad, #050505);
+            background: linear-gradient(to right, #adadad, #050505);
             border-radius: 10px;
             padding: 20px;
             margin: 0;
@@ -117,6 +131,10 @@
         }
         #Projects{
             margin-top: 200px;
+        }
+        #Cover{
+            background: linear-gradient(to bottom,  #adadad, #050505);
+            height: 500px;
         }
 
     </style>
@@ -134,15 +152,17 @@
         ssamgajula@gmail.com | github.com/SurgioGolespi
     </footer>
     <ul>
-        <li id="About">About</li>
-        <p>Software Developer.</p>
-        <h1>Hi, I'm Suraj Gajula.</h1>
+        <div id = "Cover">
+            <li id="About"><h1>About</h1></li>
+                <p>Software Developer. Especially interested in making Iphone Apps.</p>
+            <h1>Hi, I'm Suraj Gajula.</h1>
+        </div>
         <li id="Skills">Skills</li>
             <li id = "Types">Languages
             <img src="C%23 Logo.png" alt="C# Logo">
             <img src="HTML Logo.png" alt="HTML Logo">
             <img src="Swift Logo.png" alt="Swift Logo"></li>
-            <li id = "Types">Tools
+            <li id = "Types">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tools
             <img src="VS Code Logo.png" alt="VS Code Logo">
             <img src="Xcode Logo.png" alt="Xcode Logo">
             <img src="Unity Logo.png" alt="Unity Logo"></li>
@@ -156,15 +176,15 @@
         <li id="Projects">Projects</li>
         <div class="card-container">
             <div class="card">
-                <p>Unity Game Development<br>    
-                    Used C# programming in Unity to code a functional RPG. Also made creative assets including sprites, music, and dialogue for the game.<br>
-                    <br></p>
+                <h1>Game Dev</h1>  
+                    <p>Used C# programming in Unity to code a functional RPG. Also made creative assets including sprites, music, and dialogue for the game.</p>
             </div>
             <div class="card">
-                <p>Personal Website<br>
-                    Used HTML programming in GitHub Pages to code a professional website. Added user interactivity and utilized source control techniques.</p>
+                <h1>Personal Website</h1>
+                    <p>Used HTML programming in GitHub Pages to code a professional website. Added user interactivity and utilized source control techniques.</p>
             </div>
         </div>   
+        <div style="height: 200px;"></div>
     </ul>
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
