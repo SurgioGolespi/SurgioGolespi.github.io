@@ -6,18 +6,17 @@
     <title>Suraj Gajula</title>
     <style>
         body {
-            background: linear-gradient(to top, #adadad, #050505);
-            color: #ffffff;
-            font-family: 'Arial', 'Helvetica', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
             padding: 0;
             margin: 0;
             box-sizing: border-box;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            font-family: -apple-system, BlinkMacSystemFont, 'San Francisco';
             font-size: large;
         }
-
         header {
             background-color: #050505;
+            opacity: 75%;
             color: #ffffff;
             padding: 15px;
             text-align: center;
@@ -27,8 +26,8 @@
             z-index: 1000;
         }
         footer {
-            background-color: #050505;
-            color: #ffffff;
+            background-color: #ffffff;
+            color: #000000;
             padding: 40px 15px;
             position: fixed;
             bottom: 0;
@@ -52,6 +51,7 @@
             font-size: 48px;
             margin: 60px 0 20px;
             text-align: center;
+            font-weight: 500;
         }
 
         ul {
@@ -72,43 +72,6 @@
             border-radius: 5px; 
             margin-bottom: 20px;
         }
-        .card-container {
-            display: flex;
-            justify-content: space-around;
-            align-items: stretch;
-            flex-wrap: wrap;
-            padding: 20px;
-        }
-
-        .card {
-            background: linear-gradient(to left, #adadad, #050505);
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 10px;
-            padding: 10px;
-            width: 400px;
-            text-align: center;
-            transition: transform 0.3s ease;
-            position: relative; 
-        }
-
-        .card:hover {
-            transform: scale(1.05);
-            z-index: 1;
-        }
-        .card p {
-            display: none;
-            position: absolute; 
-        }
-        .card h1 {
-            display: block; 
-        }
-        .card:hover p {
-            display: block; 
-        }
-        .card:hover h1 {
-            display: none; 
-        }
         img {
             width: 100px; 
             height: auto;
@@ -118,23 +81,27 @@
         #Types {
             display: flex;
         }
-        #Job {
-            text-align: center;
-            background: linear-gradient(to right, #adadad, #050505);
-            border-radius: 10px;
-            padding: 20px;
-            margin: 0;
-            position: absolute;
-            z-index: 1;
-            left: 50%;
-            transform: translateX(-20%);
+        #Black{
+            background-color: #050505;
+            color: #ffffff;
         }
-        #Projects{
-            margin-top: 200px;
+        .blackcontainer {
+            background-color: #000000; 
+            color: #ffffff; 
+            padding: 20px; 
+            border-radius: 20px; 
+            width: 800px; 
+            text-align: center; 
+            margin: 0 auto;
         }
-        #Cover{
-            background: linear-gradient(to bottom,  #adadad, #050505);
-            height: 500px;
+        .whitecontainer {
+            background-color: #ffffff; 
+            color: #000000; 
+            padding: 20px; 
+            border-radius: 20px; 
+            width: 800px; 
+            text-align: center; 
+            margin: 0 auto;
         }
 
     </style>
@@ -149,42 +116,50 @@
         </nav>
     </header>
     <footer>
-        ssamgajula@gmail.com | github.com/SurgioGolespi
+        ssamgajula@gmail.com | <a href="https://github.com/SurgioGolespi" target = "_blank">github.com/SurgioGolespi</a>
     </footer>
     <ul>
-        <div id = "Cover">
+        <div id = "Black">
             <li id="About"><h1>About</h1></li>
-                <p>Software Developer. Especially interested in making Iphone Apps.</p>
+                <p>Software Developer. Especially interested in making iPhone Apps.</p>
             <h1>Hi, I'm Suraj Gajula.</h1>
+            <div style="height: 100px;"></div>
         </div>
-        <li id="Skills">Skills</li>
+        <div id = "White">
+        <li id="Skills"><h1>Skills</h1></li>
             <li id = "Types">Languages
             <img src="C%23 Logo.png" alt="C# Logo">
             <img src="HTML Logo.png" alt="HTML Logo">
             <img src="Swift Logo.png" alt="Swift Logo"></li>
-            <li id = "Types">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tools
+            <li id = "Types">Tools&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <img src="VS Code Logo.png" alt="VS Code Logo">
             <img src="Xcode Logo.png" alt="Xcode Logo">
             <img src="Unity Logo.png" alt="Unity Logo"></li>
-        </li>
-        <li id="Experience">Experience</li>
-            <div id="Job">
-                <p>Intern, HTOH Solutions August 2023 - Present<br> 
-                Added advanced functionality such as LRU caching, fixed bugs, and improved user<br>
-                experience for their main product, the UseBetter app, using Swift in Xcode.</p>
+            <div style="height: 100px;"></div>
+        </div>
+        <div id = "Black">
+        <li id="Experience"><h1>Experience</h1></li>
+            <div class = "whitecontainer">
+                <h1>Intern, HTOH Solutions</h1> 
+                <h2>August 2023 - Present</h2>
+                    <p>Added advanced functionality such as LRU caching, fixed bugs, and improved user<br>
+                    experience for their main product, the UseBetter app, using Swift in Xcode.</p>
             </div>
-        <li id="Projects">Projects</li>
-        <div class="card-container">
-            <div class="card">
+            <div style="height: 100px;"></div>
+        </div>
+        <li id="Projects"><h1>Projects</h1></li>
+            <div class = "blackcontainer">
                 <h1>Game Dev</h1>  
+                <h2>September 2023 - Present</h2>
                     <p>Used C# programming in Unity to code a functional RPG. Also made creative assets including sprites, music, and dialogue for the game.</p>
             </div>
-            <div class="card">
+        <div style="height: 100px;"></div>
+            <div class = "blackcontainer">
                 <h1>Personal Website</h1>
-                    <p>Used HTML programming in GitHub Pages to code a professional website. Added user interactivity and utilized source control techniques.</p>
+                <h2>December 2023 - Present</h2>
+                    <p>Used HTML programming in GitHub Pages to code a professional website. Added user interactivity and utilized source control techniques.</p> 
             </div>
-        </div>   
-        <div style="height: 200px;"></div>
+        <div style="height: 100px;"></div>
     </ul>
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
